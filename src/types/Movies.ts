@@ -21,3 +21,20 @@ export interface Movie {
     vote_average: number;
     vote_count: number;
 }
+  
+export interface ITvShow extends Pick<Movie,
+    "genre_ids" |
+    "id" |
+    "original_language" |
+    "overview" |
+    "popularity" |
+    "poster_path" |
+    "vote_average" |
+    "vote_count" 
+> {
+    backdrop_path?: string;
+    first_air_date: string;
+    name: string;
+    origin_country: string[];
+    original_name: string;
+}

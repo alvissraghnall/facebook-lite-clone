@@ -3,10 +3,10 @@
         <MdPlayCircleFilled />
     </div>
     <div class="image-holder">
-        <img src={movie.poster_path ? `${imagesLink + movie.poster_path}` : ""} alt="" />
+        <img src={poster_path ? `${imagesLink + poster_path}` : ""} alt="" />
     </div>
     <div>
-        <h3>{ movie.title.length < 40 ? movie.title : movie.title.substring(0, 41).concat("...")}</h3>
+        <h3>{ title.length < 40 ? title : title.substring(0, 41).concat("...")}</h3>
     </div>
 </div>
 
@@ -14,7 +14,8 @@
 	import type { Movie } from 'src/types/Movies';
     import MdPlayCircleFilled from 'svelte-icons/md/MdPlayCircleFilled.svelte';
 
-    export let movie: Movie;
+    export let title: string;
+    export let poster_path: string;
     export let imagesLink: string;
 </script>
 

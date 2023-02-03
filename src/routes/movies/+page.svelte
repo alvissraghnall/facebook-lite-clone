@@ -16,7 +16,7 @@
 
 <div class="movies">
     {#each $moviesStore as movie}
-        <MovieCard {movie} imagesLink={imagePath} />
+        <MovieCard title={movie.title} poster_path={movie.poster_path} imagesLink={imagePath} />
     {/each}
 </div>
 
