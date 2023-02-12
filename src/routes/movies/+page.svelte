@@ -1,4 +1,5 @@
 <script lang="ts">
+    import Carousel from "../../components/MovieCarousel.svelte";
     import { movies as moviesStore } from "../../store/movies";
 	import MovieCard from '../../components/MovieCard.svelte';
     import type { Movie } from "../../types/Movies";    
@@ -14,6 +15,7 @@
     moviesStore.set(movies);
 </script>
 
+<Carousel data={$moviesStore} />
 <div class="movies">
     {#each $moviesStore as movie}
         <MovieCard title={movie.title} poster_path={movie.poster_path} imagesLink={imagePath} />

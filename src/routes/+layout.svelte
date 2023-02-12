@@ -2,11 +2,13 @@
     import { movies as moviesStore } from "../store/movies";
 	import type { Movie } from '../types/Movies';
 	import { onMount, setContext } from 'svelte';
-	import Navbar from '../components/Navbar.svelte';
-
-    // $moviesStore.
+	import Sidebar from '../components/Sidebar.svelte';
+	import Header from '../components/Header.svelte';
+	import { sideNavOpen } from "../store/util";
+	
 </script>
 
-<Navbar />
+<Header />
+<Sidebar />
 
 <slot></slot>
