@@ -10,7 +10,10 @@ export async function load ({ fetch, params }: LoadEvent): Promise<PageServerLoa
             return error(502, "Could not connect!")
         });
     
-    return data;
+    return {
+        name: params.id,
+        data
+    };
 }
 
 // 

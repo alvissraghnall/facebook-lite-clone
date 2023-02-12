@@ -8,3 +8,5 @@ node_modules
 !.env.example
 .npmrc
 *.log
+vite.config.ts.timestamp-1676228688668.mjs
+
