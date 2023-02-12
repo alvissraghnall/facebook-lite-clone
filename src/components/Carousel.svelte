@@ -136,7 +136,7 @@ const next = (ev: Event) => {
         color: rgb(31 41 55);
     }
 
-    .screenreader {
+    :global(.screenreader) {
         position: absolute;
         width: 1px;
         height: 1px;

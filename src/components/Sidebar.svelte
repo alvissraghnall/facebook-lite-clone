@@ -7,7 +7,7 @@
 </script>
 
 <aside class:closed={$sideNavOpen}>
-	<a class="" href="movies">
+	<a class="" href="movies#popular">
 		<svg class="sidenav-icon" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path
 				d="M8 16.25C7.58579 16.25 7.25 16.5858 7.25 17C7.25 17.4142 7.58579 17.75 8 17.75H14C14.4142 17.75 14.75 17.4142 14.75 17C14.75 16.5858 14.4142 16.25 14 16.25H8Z"

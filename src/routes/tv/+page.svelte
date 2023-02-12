@@ -1,9 +1,9 @@
 <script lang="ts">
-	import MovieCard from '../../components/MovieCard.svelte';
-    import type { ITvShow } from "../../types/Movies";    
+	import type { ITvShow } from "../../types/Movies";
+	import TvCard from "../../components/TvCard.svelte";
     import type {PageData} from './$types';
 
-    const imagePath = "https://image.tmdb.org/t/p/w500/";
+    const imagePath = "https://image.tmdb.org/t/p/original/";
     let shows: ITvShow[];
     export let data;
 
@@ -14,7 +14,15 @@
 
 <main>
     {#each shows as show}
-        <MovieCard title={show.name} poster_path={show.poster_path} imagesLink={imagePath} />
+        <TvCard 
+            poster_path={show.poster_path || ""} 
+            imagesLink={imagePath} 
+            title={show.name}
+            relDate={show.first_air_date}
+            id={show.id}
+            vote_average={show.vote_average}
+            overview={show.overview}
+        />
     {/each}
 </main>
 

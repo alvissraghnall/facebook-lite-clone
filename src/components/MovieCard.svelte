@@ -39,6 +39,8 @@
 
     .holder {
         position: relative;
+        background-image: linear-gradient(to bottom left, #1f2937, #111827);
+		background-attachment: fixed;
     }
 
     .holder > :first-child {
